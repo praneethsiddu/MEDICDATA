@@ -117,7 +117,7 @@ def main():
             delete_data(delete_by_data_name)
             st.warning("DELETED: '{}'".format(delete_by_data_name))
 
-        with st.beta_expander("UPDATED DATA"):
+        with st.expander("UPDATED DATA"):
             result = view_all_data()
             df = pd.DataFrame(result, columns=["NAME", "GENDER", "DOB", "CONTACT", "BLOOD GROUP", "PATIENT HISTORY", "DOCTOR NAME"])
             st.dataframe(df)
